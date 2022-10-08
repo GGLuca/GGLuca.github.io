@@ -205,6 +205,44 @@ div.csl-indent {
   <li><a href="#mici-modificari" id="toc-mici-modificari" class="nav-link" data-scroll-target="#mici-modificari">Mici modificari</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#manipularea-de-date-cu-dplyr" id="toc-manipularea-de-date-cu-dplyr" class="nav-link" data-scroll-target="#manipularea-de-date-cu-dplyr">Manipularea de date cu <code>dplyr()</code></a>
+  <ul class="collapse">
+  <li><a href="#setul-de-date" id="toc-setul-de-date" class="nav-link" data-scroll-target="#setul-de-date">Setul de date</a></li>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select">select()</a>
+  <ul class="collapse">
+  <li><a href="#extrage-variabile-coloane-după-nume-sau-poziție." id="toc-extrage-variabile-coloane-după-nume-sau-poziție." class="nav-link" data-scroll-target="#extrage-variabile-coloane-după-nume-sau-poziție.">Extrage variabile (coloane) după nume, sau poziție.</a></li>
+  <li><a href="#argumente-select" id="toc-argumente-select" class="nav-link" data-scroll-target="#argumente-select">Argumente select()</a></li>
+  <li><a href="#verbe-ajutatoare" id="toc-verbe-ajutatoare" class="nav-link" data-scroll-target="#verbe-ajutatoare">Verbe ajutatoare</a></li>
+  </ul></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">filter()</a>
+  <ul class="collapse">
+  <li><a href="#extrage-cazuri-după-un-criteriu-logic" id="toc-extrage-cazuri-după-un-criteriu-logic" class="nav-link" data-scroll-target="#extrage-cazuri-după-un-criteriu-logic">Extrage cazuri după un criteriu logic</a></li>
+  <li><a href="#filter---exemplu" id="toc-filter---exemplu" class="nav-link" data-scroll-target="#filter---exemplu">filter() - Exemplu</a></li>
+  </ul></li>
+  <li><a href="#condiţii" id="toc-condiţii" class="nav-link" data-scroll-target="#condiţii">Condiţii</a></li>
+  <li><a href="#voi-sunteți-la-rând" id="toc-voi-sunteți-la-rând" class="nav-link" data-scroll-target="#voi-sunteți-la-rând">Voi sunteți la rând…</a></li>
+  <li><a href="#modificați-codul-de-mai-jos-în-așa-fel-încât-ca-r-să-afișeze" id="toc-modificați-codul-de-mai-jos-în-așa-fel-încât-ca-r-să-afișeze" class="nav-link" data-scroll-target="#modificați-codul-de-mai-jos-în-așa-fel-încât-ca-r-să-afișeze">Modificați codul de mai jos în așa fel încât ca R să afișeze:</a></li>
+  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange">arrange()</a>
+  <ul class="collapse">
+  <li><a href="#ordondare-de-date-de-la-mic-la-mare-si-invers." id="toc-ordondare-de-date-de-la-mic-la-mare-si-invers." class="nav-link" data-scroll-target="#ordondare-de-date-de-la-mic-la-mare-si-invers.">Ordondare de date de la mic la mare :) si invers.</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#the-pipe" id="toc-the-pipe" class="nav-link" data-scroll-target="#the-pipe"><code>%&gt;%</code>The Pipe!</a>
+  <ul class="collapse">
+  <li><a href="#poate-fi-si-mai-rau-accepțiunea-veche-r" id="toc-poate-fi-si-mai-rau-accepțiunea-veche-r" class="nav-link" data-scroll-target="#poate-fi-si-mai-rau-accepțiunea-veche-r">Poate fi si mai rau: Accepțiunea veche R</a></li>
+  <li><a href="#ce-face-pipa" id="toc-ce-face-pipa" class="nav-link" data-scroll-target="#ce-face-pipa">Ce face “pipa”…</a></li>
+  </ul></li>
+  <li><a href="#enter-the-pipe" id="toc-enter-the-pipe" class="nav-link" data-scroll-target="#enter-the-pipe">Enter <code>%&gt;%</code>the Pipe!</a></li>
+  <li><a href="#e-randul-vostru-din-nou" id="toc-e-randul-vostru-din-nou" class="nav-link" data-scroll-target="#e-randul-vostru-din-nou">E randul vostru din nou:</a>
+  <ul class="collapse">
+  <li><a href="#folositi-the-pipe" id="toc-folositi-the-pipe" class="nav-link" data-scroll-target="#folositi-the-pipe">Folositi “the pipe”</a></li>
+  </ul></li>
+  <li><a href="#solutia" id="toc-solutia" class="nav-link" data-scroll-target="#solutia">Solutia</a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate">mutate()</a></li>
+  <li><a href="#summarise" id="toc-summarise" class="nav-link" data-scroll-target="#summarise">summarise()</a>
+  <ul class="collapse">
+  <li><a href="#verbul-ajutator-group_by" id="toc-verbul-ajutator-group_by" class="nav-link" data-scroll-target="#verbul-ajutator-group_by">Verbul ajutator <code>group_by</code></a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -1017,18 +1055,340 @@ Coefficients:
 <li>Executarea numelui readuce graficul “în existență”.</li>
 <li>Exportul prin panoul de vizualizare</li>
 </ul>
-<p>##Concluzie:</p>
-<p>#luatedepetwitter</p>
+<p>] Surse.</p>
+<p>https://ggplot2-book.org/</p>
+</section>
+</section>
+</section>
+<section id="manipularea-de-date-cu-dplyr" class="level1">
+<h1>Manipularea de date cu <code>dplyr()</code></h1>
+<p><code>dplyr</code> este pachet ce face parte din <code>tidyverse</code>, si este o gramatică a manipulării datelor, oferind un set coerent de verbe care vă ajută să rezolvați cele mai frecvente provocări legate de manipularea datelor:</p>
+<ul>
+<li><code>mutate()</code> adaugă noi variabile care sunt funcții ale variabilelor existente. *<code>select()</code> selectează variabilele pe baza numelor lor.</li>
+<li><code>filter()</code> selectează cazuri pe baza valorilor lor.</li>
+<li><code>summarise()</code> reduce mai multe valori la un singur rezumat.</li>
+<li><code>arrange()</code> modifică ordinea rândurilor.</li>
+</ul>
+<section id="setul-de-date" class="level2">
+<h2 class="anchored" data-anchor-id="setul-de-date">Setul de date</h2>
+<p>25 de itemi de personalitate preluați din International Personality Item Pool (ipip.ori.org). Au fost incluși ca parte a proiectului de evaluare a personalității bazat pe internet Synthetic Aperture Personality Assessment (SAPA). Datele provenite de la 2800 de subiecți sunt incluse aici ca set demonstrativi. De asemenea, sunt incluse trei variabile demografice suplimentare (sex, educație și vârstă).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)   <span class="co">#pachetul psych; daca nu-l aveti, instalati-l!</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bfi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      A1 A2 A3 A4 A5 C1 C2 C3 C4 C5 E1 E2 E3 E4 E5 N1 N2 N3 N4 N5 O1 O2 O3 O4
+61617  2  4  3  4  4  2  3  3  4  4  3  3  3  4  4  3  4  2  2  3  3  6  3  4
+61618  2  4  5  2  5  5  4  4  3  4  1  1  6  4  3  3  3  3  5  5  4  2  4  3
+61620  5  4  5  4  4  4  5  4  2  5  2  4  4  4  5  4  5  4  2  3  4  2  5  5
+61621  4  4  6  5  5  4  4  3  5  5  5  3  4  4  4  2  5  2  4  1  3  3  4  3
+61622  2  3  3  4  5  4  4  5  3  2  2  2  5  4  5  2  3  4  4  3  3  3  4  3
+61623  6  6  5  6  5  6  6  6  1  3  2  1  6  5  6  3  5  2  2  3  4  3  5  6
+      O5 gender education age
+61617  3      1        NA  16
+61618  3      2        NA  18
+61620  2      2        NA  17
+61621  5      2        NA  17
+61622  3      1        NA  17
+61623  1      2         3  21</code></pre>
+</div>
+</div>
+</section>
+<section id="select" class="level2">
+<h2 class="anchored" data-anchor-id="select">select()</h2>
+<section id="extrage-variabile-coloane-după-nume-sau-poziție." class="level3">
+<h3 class="anchored" data-anchor-id="extrage-variabile-coloane-după-nume-sau-poziție.">Extrage variabile (coloane) după nume, sau poziție.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(.data, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>unde data = setul de date si … = numele variabilelor</p>
+</section>
+<section id="argumente-select" class="level3">
+<h3 class="anchored" data-anchor-id="argumente-select">Argumente select()</h3>
+<p>Alege o plajă de variabile:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(bfi, A1<span class="sc">:</span>A5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Alege toate variabilele, în afară de A1:A5</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(bfi, <span class="sc">-</span><span class="fu">c</span>(A1<span class="sc">:</span>A5))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="verbe-ajutatoare" class="level3">
+<h3 class="anchored" data-anchor-id="verbe-ajutatoare">Verbe ajutatoare</h3>
+<p><strong>starts_with()</strong> - Alege variabile ale căror nume începe cu:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(bfi, <span class="fu">starts_with</span>(<span class="st">"A"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>starts_with()</strong> - Alege variabile ale căror nume se termină cu:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(bfi, <span class="fu">ends_with</span>(<span class="st">"n"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="filter" class="level2">
+<h2 class="anchored" data-anchor-id="filter">filter()</h2>
+<section id="extrage-cazuri-după-un-criteriu-logic" class="level3">
+<h3 class="anchored" data-anchor-id="extrage-cazuri-după-un-criteriu-logic">Extrage cazuri după un criteriu logic</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(.data, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>unde data = datele si … = test logic (adevărat sau nu)</p>
+</section>
+<section id="filter---exemplu" class="level3">
+<h3 class="anchored" data-anchor-id="filter---exemplu">filter() - Exemplu</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(bfi, age <span class="sc">&gt;</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="condiţii" class="level2">
+<h2 class="anchored" data-anchor-id="condiţii">Condiţii</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://pbs.twimg.com/media/FeJmBn5XEAM_kFI?format=png&amp;name=4096x4096.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">@tanya_shapiro</figcaption><p></p>
+<p><img src="imagini/logic.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Surse.</p>
-<p>https://ggplot2-book.org/</p>
-
 </section>
+<section id="voi-sunteți-la-rând" class="level2">
+<h2 class="anchored" data-anchor-id="voi-sunteți-la-rând">Voi sunteți la rând…</h2>
+</section>
+<section id="modificați-codul-de-mai-jos-în-așa-fel-încât-ca-r-să-afișeze" class="level2">
+<h2 class="anchored" data-anchor-id="modificați-codul-de-mai-jos-în-așa-fel-încât-ca-r-să-afișeze">Modificați codul de mai jos în așa fel încât ca R să afișeze:</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(bfi, age <span class="sc">==</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Cazurile cu un nivel educational peste 2</li>
+<li>Cazurile cu sex = 1</li>
+<li>Cazurile cu varsta de 14 ani si sex = 1</li>
+</ul>
+<p>Atenţie:</p>
+<ul>
+<li>Folosirea = în loc de ==</li>
+<li>Uitați ghilimelele “”</li>
+</ul>
+</section>
+<section id="arrange" class="level2">
+<h2 class="anchored" data-anchor-id="arrange">arrange()</h2>
+<section id="ordondare-de-date-de-la-mic-la-mare-si-invers." class="level3">
+<h3 class="anchored" data-anchor-id="ordondare-de-date-de-la-mic-la-mare-si-invers.">Ordondare de date de la mic la mare :) si invers.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(.data, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>unde data = datele si … = variabila de ordonat</p>
+<p>Exemplu:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(bfi, age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>sau descrescator:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(bfi, <span class="fu">desc</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="the-pipe" class="level1">
+<h1><code>%&gt;%</code>The Pipe!</h1>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Probabil cea mai buna “achizitie R” in domeniul codului, in ultimii ani.</p>
+<p>Sa luam cazul datelor <code>exemplu.ocb</code>. Il veti gasi impreuna cu celelalte date pe care le-am vazut azi. Introduceti datele in R.</p>
+<p>Datele provin din 110 echipe reale de munca si provin de la 400+ angajati din diverse companii din Bavaria.</p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagini/pip.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(babynames)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+   year sex   name          n   prop
+  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;
+1  1880 F     Mary       7065 0.0724
+2  1880 F     Anna       2604 0.0267
+3  1880 F     Emma       2003 0.0205
+4  1880 F     Elizabeth  1939 0.0199
+5  1880 F     Minnie     1746 0.0179
+6  1880 F     Margaret   1578 0.0162</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>baieti_2015     <span class="ot">&lt;-</span> <span class="fu">filter</span>(babynames, year <span class="sc">==</span> <span class="dv">2015</span>, sex <span class="sc">==</span> <span class="st">"M"</span>)</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>obiect_selectat <span class="ot">&lt;-</span> <span class="fu">select</span>(baieti_2015, name, n)</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>descrescator    <span class="ot">&lt;-</span> <span class="fu">arrange</span>(obiect_selectat, <span class="fu">desc</span>(n))</span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(descrescator)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  name        n
+  &lt;chr&gt;   &lt;int&gt;
+1 Noah    19613
+2 Liam    18355
+3 Mason   16610
+4 Jacob   15938
+5 William 15889
+6 Ethan   15069</code></pre>
+</div>
+</div>
+<p>Întrebare: Ce se intamplă în aceste rânduri de cod?</p>
+<section id="poate-fi-si-mai-rau-accepțiunea-veche-r" class="level2">
+<h2 class="anchored" data-anchor-id="poate-fi-si-mai-rau-accepțiunea-veche-r">Poate fi si mai rau: Accepțiunea veche R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(<span class="fu">select</span>(<span class="fu">filter</span>(babynames, year <span class="sc">==</span> <span class="dv">2015</span>, </span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  sex <span class="sc">==</span> <span class="st">"M"</span>), name, n), <span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ce-face-pipa" class="level2">
+<h2 class="anchored" data-anchor-id="ce-face-pipa">Ce face “pipa”…</h2>
+<p><img src="imagini/pipeline.png" class="img-fluid"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(babynames, n <span class="sc">==</span> <span class="dv">99680</span>)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">%&gt;%</span> <span class="fu">filter</span>(n <span class="sc">==</span> <span class="dv">99680</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Avantajul nu este evident, dar pe linii lungi de analize, munca devine extrem de usoara.</p>
+</section>
+</section>
+<section id="enter-the-pipe" class="level1">
+<h1>Enter <code>%&gt;%</code>the Pipe!</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>baieti_2015   <span class="ot">&lt;-</span> <span class="fu">filter</span>(babynames, year <span class="sc">==</span> <span class="dv">2015</span>, sex <span class="sc">==</span> <span class="st">"M"</span>)</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>obiect_selectat  <span class="ot">&lt;-</span> <span class="fu">select</span>(baieti_2015, name, n)</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>descrescator  <span class="ot">&lt;-</span> <span class="fu">arrange</span>(obiect_selectat, <span class="fu">desc</span>(n))</span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>descrescator</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>devine:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">%&gt;%</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2015</span>, sex <span class="sc">==</span> <span class="st">"M"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, n) <span class="sc">%&gt;%</span></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="e-randul-vostru-din-nou" class="level1">
+<h1>E randul vostru din nou:</h1>
+<section id="folositi-the-pipe" class="level2">
+<h2 class="anchored" data-anchor-id="folositi-the-pipe">Folositi “the pipe”</h2>
+<p>Din nou, lucrati cu setul de date <code>babynames</code>.</p>
+<p>Sarcina:</p>
+<ol type="1">
+<li>Alegeti doar fetele nascute in 2014</li>
+<li>Alegeti varibilele <code>name</code> si <code>n</code></li>
+<li>Sortati setul de date in asa fel incat cele mai populare nume sa fie primele.</li>
+</ol>
+</section>
+</section>
+<section id="solutia" class="level1">
+<h1>Solutia</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">%&gt;%</span> </span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2015</span>, sex <span class="sc">==</span> <span class="st">"F"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, n) <span class="sc">%&gt;%</span> </span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="mutate" class="level1">
+<h1>mutate()</h1>
+<p>Funcția mutate() este o funcție de creare de noi variabile. În esență, asta este tot ceea ce face. La fel ca toate funcțiile dplyr, este concepută pentru a face un singur lucru.</p>
+<p>mutate() creaza variabile noi in felul urmator:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span>bfi <span class="sc">%&gt;%</span> </span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">medie.agreeabilitate =</span> (A1<span class="sc">+</span>A2<span class="sc">+</span>A3<span class="sc">+</span>A4<span class="sc">+</span>A5)<span class="sc">/</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Dar poate si mai multe, toate intr-o singura “m” :)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span>bfi <span class="sc">%&gt;%</span> </span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">medie.agreeabilitate =</span>    (A1<span class="sc">+</span>A2<span class="sc">+</span>A3<span class="sc">+</span>A4<span class="sc">+</span>A5)<span class="sc">/</span><span class="dv">5</span>,</span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">medie.constiincionziate =</span> (C1<span class="sc">+</span>C2<span class="sc">+</span>C3<span class="sc">+</span>C4<span class="sc">+</span>C4<span class="sc">/</span><span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span>bfi <span class="sc">%&gt;%</span> </span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">row_mean=</span><span class="fu">mean</span>(<span class="fu">c_across</span>(<span class="fu">starts_with</span>(<span class="st">"A"</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,800 × 29
+# Rowwise: 
+      A1    A2    A3    A4    A5    C1    C2    C3    C4    C5    E1    E2    E3
+   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+ 1     2     4     3     4     4     2     3     3     4     4     3     3     3
+ 2     2     4     5     2     5     5     4     4     3     4     1     1     6
+ 3     5     4     5     4     4     4     5     4     2     5     2     4     4
+ 4     4     4     6     5     5     4     4     3     5     5     5     3     4
+ 5     2     3     3     4     5     4     4     5     3     2     2     2     5
+ 6     6     6     5     6     5     6     6     6     1     3     2     1     6
+ 7     2     5     5     3     5     5     4     4     2     3     4     3     4
+ 8     4     3     1     5     1     3     2     4     2     4     3     6     4
+ 9     4     3     6     3     3     6     6     3     4     5     5     3    NA
+10     2     5     6     6     5     6     5     6     2     1     2     2     4
+# … with 2,790 more rows, and 16 more variables: E4 &lt;int&gt;, E5 &lt;int&gt;, N1 &lt;int&gt;,
+#   N2 &lt;int&gt;, N3 &lt;int&gt;, N4 &lt;int&gt;, N5 &lt;int&gt;, O1 &lt;int&gt;, O2 &lt;int&gt;, O3 &lt;int&gt;,
+#   O4 &lt;int&gt;, O5 &lt;int&gt;, gender &lt;int&gt;, education &lt;int&gt;, age &lt;int&gt;,
+#   row_mean &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span>bfi <span class="sc">%&gt;%</span> </span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">row_mean=</span><span class="fu">mean</span>(<span class="fu">c_across</span>(A1<span class="sc">:</span>A5)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,800 × 29
+# Rowwise: 
+      A1    A2    A3    A4    A5    C1    C2    C3    C4    C5    E1    E2    E3
+   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+ 1     2     4     3     4     4     2     3     3     4     4     3     3     3
+ 2     2     4     5     2     5     5     4     4     3     4     1     1     6
+ 3     5     4     5     4     4     4     5     4     2     5     2     4     4
+ 4     4     4     6     5     5     4     4     3     5     5     5     3     4
+ 5     2     3     3     4     5     4     4     5     3     2     2     2     5
+ 6     6     6     5     6     5     6     6     6     1     3     2     1     6
+ 7     2     5     5     3     5     5     4     4     2     3     4     3     4
+ 8     4     3     1     5     1     3     2     4     2     4     3     6     4
+ 9     4     3     6     3     3     6     6     3     4     5     5     3    NA
+10     2     5     6     6     5     6     5     6     2     1     2     2     4
+# … with 2,790 more rows, and 16 more variables: E4 &lt;int&gt;, E5 &lt;int&gt;, N1 &lt;int&gt;,
+#   N2 &lt;int&gt;, N3 &lt;int&gt;, N4 &lt;int&gt;, N5 &lt;int&gt;, O1 &lt;int&gt;, O2 &lt;int&gt;, O3 &lt;int&gt;,
+#   O4 &lt;int&gt;, O5 &lt;int&gt;, gender &lt;int&gt;, education &lt;int&gt;, age &lt;int&gt;,
+#   row_mean &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="summarise" class="level1">
+<h1>summarise()</h1>
+<p>Rolul lui <code>summarise()</code> este de a agrega datele uni vector. Ideal pentru a crea statistici descriptive.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span>bfi <span class="sc">%&gt;%</span> </span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">medie.varsta.esantion =</span> <span class="fu">mean</span>(age),</span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">abaterea.standard     =</span> <span class="fu">sd</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  medie.varsta.esantion abaterea.standard
+1              28.78214          11.12755</code></pre>
+</div>
+</div>
+<section id="verbul-ajutator-group_by" class="level2">
+<h2 class="anchored" data-anchor-id="verbul-ajutator-group_by">Verbul ajutator <code>group_by</code></h2>
+<p>Una dintre cele mai puternice combinatii este si cea mai simpla. Agregari, sau statistici sumare, descriptive pe grupe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent) <span class="sc">%&gt;%</span> </span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">media.gdp =</span> <span class="fu">mean</span>(gdpPercap),</span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd.gdp    =</span> <span class="fu">median</span>(gdpPercap))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  continent media.gdp sd.gdp
+  &lt;fct&gt;         &lt;dbl&gt;  &lt;dbl&gt;
+1 Africa        2194.  1192.
+2 Americas      7136.  5466.
+3 Asia          7902.  2647.
+4 Europe       14469. 12082.
+5 Oceania      18622. 17983.</code></pre>
+</div>
+</div>
+
 </section>
 </section>
 
